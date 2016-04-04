@@ -9,9 +9,11 @@
   "author": "Alexander Borozdyuhin",
   "license": "ISC",
   "dependencies": {
+    "es6-promises": "^1.0.10",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
+    "object-assign": "^4.0.1",
     "react": "^0.14.8",
     "reactify": "^1.1.1"
   }
