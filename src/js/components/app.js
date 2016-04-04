@@ -3,7 +3,7 @@ var AppActions = require("../actions/app-actions");
 var Catalog = require("./catalog/app-catalog");
 var Cart = require("./cart/app-cart");
 var Router = require("react-router-component");
-var CatalogDetail = require("./product/app-catalogdetails");
+var CatalogDetails = require("./product/app-catalogdetails");
 var Template = require("./app-apptemplate")
 
 var Locations = Router.Locations;
@@ -16,7 +16,7 @@ var App = React.createClass({
 				<Locations>
 					<Location path="/" handler={Catalog} />
 					<Location path="/cart" handler={Cart} />
-					<Location path="/item/:item" handler={CatalogDetail} />
+					{/*<Location path="/item/:item" handler={CatalogDetails} />*/}
 				</Locations>
 			</Template>
 		);
