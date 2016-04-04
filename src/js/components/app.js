@@ -1,13 +1,17 @@
 var React = require("react");
 var AppActions = require("../actions/app-actions");
+var Catalog = require("../components/app-catalog");
+var Cart = require("../components/app-cart");
 
 var App = React.createClass({
-	clickHandle: function() {
-		AppActions.addItem("some item");
-	},
 	render: function() {
 		return (
-			<h1 onClick={this.clickHandle}>applicatio1</h1>
+			<div>
+				<h4>mess</h4>
+				<Catalog />
+				<h4>Cart</h4>
+				<Cart />
+			</div>
 		);
 	}
 });
