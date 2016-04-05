@@ -4,6 +4,7 @@ var RemoveFromCart = require("./app-removefromcart");
 var Increase = require("./app-increase");
 var Decrease = require("./app-decrease");
 var StoreWatchMixin = require("../../mixins/StoreWatchMixin").StoreWatchMixin;
+var Link = require("react-router-component").Link;
 
 function cartItems () {
 	 return {
@@ -31,26 +32,29 @@ var Cart = React.createClass({
 			</tr> );
 		});
 		return (
-			<table className="table table-hover">
-				<thead>
-					<tr>
-						<th></th>
-						<th>Item</th>
-						<th>Qty</th>
-						<th></th>
-						<th>Subtotal</th>
-					</tr>
-				</thead>
-				<tbody>
-					{items}
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colSpan="4" className="text-right">Total</td>
-						<td>${total}</td>
-					</tr>
-				</tfoot>
-			</table>
+			<div>
+				<table className="table table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Item</th>
+							<th>Qty</th>
+							<th></th>
+							<th>Subtotal</th>
+						</tr>
+					</thead>
+					<tbody>
+						{items}
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colSpan="4" className="text-right">Total</td>
+							<td>${total}</td>
+						</tr>
+					</tfoot>
+				</table>
+				<Link href="/">Continue shoping</Link>
+			</div>
 		); 
 	}
 });

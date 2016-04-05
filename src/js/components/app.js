@@ -10,13 +10,23 @@ var Locations = Router.Locations;
 var Location = Router.Location;
 
 var App = React.createClass({
+	// getInitialState: function() {
+	// 	console.log("initial state");
+	// 	return null;
+	// },
+	// componentDidMount: function() {
+	// 	console.log("did mount");
+	// },
+	// componentWillMount: function() {
+	// 	console.log("will mount");
+	// },
 	render: function() {
 		return (
 			<Template>
-				<Locations>
+				<Locations hash>
 					<Location path="/" handler={Catalog} />
 					<Location path="/cart" handler={Cart} />
-					{/*<Location path="/item/:item" handler={CatalogDetails} />*/}
+					<Location path="/item/:item" handler={CatalogDetails} />
 				</Locations>
 			</Template>
 		);
